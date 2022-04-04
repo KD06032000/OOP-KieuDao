@@ -1,9 +1,9 @@
 <?php 
-    class Database{
+    class Database {
         public $productTable = array();
-        public $catalogyTable = array();
+        public $categoryTable = array();
         public $accessoryTable = array();
-        protected static $intants = null;
+        protected static $instants = null;
 
         public static function getInstants($className = 'Database') {
             if(empty(self::$instants)){
@@ -103,6 +103,7 @@
             }
             return 0;
         }
+
         public function getTableByName($nameTable, $name) {
             foreach($this->{$nameTable} as $row)
             {
